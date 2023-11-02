@@ -1,3 +1,11 @@
 = Symbian SDK in Docker
 
 Symbian Belle SDK in Docker.
+
+== Usage
+
+----
+$ wget https://raw.githubusercontent.com/I-asked/symbian-docker/main/sdk.sh
+$ chmod +x ./sdk.sh
+$ ./sdk.sh "${SOURCE_DIR}" "${BUILD_DIR}" --help
+----
