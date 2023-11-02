@@ -54,7 +54,7 @@ main () {
   OCI_IMAGE="${OCI_IMAGE:-symbian}"
 
   LOAD_TAG="${LOAD_TAG:-latest}"
-  LOAD_URL="${LOAD_URL:-https://github.com/I-asked/symbian-docker/releases/$LOAD_TAG/downloads/symbian.txz}"
+  LOAD_URL="${LOAD_URL:-https://github.com/I-asked/symbian-docker/releases/$LOAD_TAG/download/symbian.txz}"
 
   LOAD_OUT="${LOAD_OUT:-$TEMP_DIR/symbian.txz}"
 
