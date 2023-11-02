@@ -49,14 +49,14 @@ trap '_clean_up' EXIT
 OCI_IMAGE="${OCI_IMAGE:-symbian}"
 
 LOAD_TAG="${LOAD_TAG:-latest}"
-LOAD_URL="${LOAD_URL:-https://github.com/I-asked/symbian-docker/releases/$LOAD_TAG/downloads/symbian.tlz4}"
+LOAD_URL="${LOAD_URL:-https://github.com/I-asked/symbian-docker/releases/$LOAD_TAG/downloads/symbian.txz}"
 
-LOAD_OUT="${LOAD_OUT:-$TEMP_DIR/symbian.tlz4}"
+LOAD_OUT="${LOAD_OUT:-$TEMP_DIR/symbian.txz}"
 
 if ! "${OCI_EXE}" image inspect "${OCI_IMAGE}" &>/dev/null ; then
   >&2 echo " ==> Image not found, will download now..."
   if wget -O "${LOAD_OUT}" "${LOAD_URL}" ; then
-    lz4 -d "${OCI_EXE}" - |"${OCI_EXE}" image import -
+    xz -d "${OCI_EXE}" - |"${OCI_EXE}" image import -
   elif [[ -d "${SCRIPT_PATH}/external/Nokia_Symbian_Belle_SDK_v1.0" ]] \
       && [[ -d "${SCRIPT_PATH}/external/gcc-12.1.0" ]] ; then
     >&2 echo " ==> Could not download the image, will build now..."
