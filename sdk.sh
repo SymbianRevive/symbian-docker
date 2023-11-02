@@ -14,6 +14,7 @@ main () {
   if (( EUID != 0 )) ; then
     if command -v sudo &>/dev/null ; then
       sudo "${SHELL}" "$@"
+      exit $?
     else
       >&2 echo " ==> This script MUST be run by a normal user using sudo!"
       exit 1
