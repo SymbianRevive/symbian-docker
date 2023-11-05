@@ -1,3 +1,10 @@
 = Symbian SDK in Docker
 
 Symbian Belle SDK in Docker.
+
+== Example
+
+----
+(host-pc) # docker pull ghcr.io/symbianrevive/symbian
+(host-pc) # docker run --privileged --rm -it -v "$PWD:/work" symbian bash -li
+----
