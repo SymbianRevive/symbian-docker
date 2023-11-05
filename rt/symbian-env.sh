@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 export WINEPREFIX="${WINEPREFIX:-/var/lib/nokiaprefix}"
 export WINEARCH="${WINEARCH:-win32}"
+export WINEDEBUG="-all"
 
 export SYMBIAN_GCC_ROOT="${SYMBIAN_GCC_ROOT:-${WINEPREFIX}/drive_c/gcc-12.1.0/}"
 export EPOCROOT="${EPOCROOT:-${WINEPREFIX}/drive_c/Nokia/devices/Nokia_Symbian_Belle_SDK_v1.0/}"
