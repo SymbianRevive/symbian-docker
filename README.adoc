@@ -4,7 +4,10 @@ Symbian Belle SDK in Docker.
 
 == Example
 
+CAUTION: This image currently only runs with the `--privileged` flag!
+         Therefore, you must run Docker/Podman as the `root` account!
+
 ----
 (host-pc) # docker pull ghcr.io/symbianrevive/symbian
-(host-pc) # docker run --privileged --rm -it -v "$PWD:/work" symbian bash -li
+(host-pc) # docker run --privileged --rm -it -v "$PWD:/work" ghcr.io/symbianrevive/symbian bash -li
 ----
